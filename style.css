@@ -22,6 +22,7 @@ body {
     top:12px;
     left:198px;
     position:absolute;
+    z-index:10;
     width:260px;
     height:36px;
     padding:12px 0 12px 20px;
@@ -79,6 +80,9 @@ body {
 .scene {
     position:absolute;
     top:0;
+    left:0;
+    -webkit-transition:left 0.3s ease-out;
+    -moz-transition:left 0.3s ease-out;
 }
 
 .phone {

@@ -8,17 +8,22 @@
 
 <body>
 <div class="bg">
+    <script>
+    function gotoScene( index ) {
+        document.getElementById( 'Scene' ).style.left = - ( 1280 * index )+ 'px';
+    }
+    </script>
     <div class="nav">
-        <img src="img/space.gif" width="41" height="33" alt="双双" class="nav-logo">
-        <div><u>加入</u></div>
-        <div><u>一群凡想人</u></div>
+        <img src="img/space.gif" width="41" height="33" alt="双双" class="nav-logo" onclick="gotoScene( 0 )">
+        <div><u onclick="gotoScene( 1 )">加入</u></div>
+        <div><u onclick="gotoScene( 2 )">一群凡想人</u></div>
     </div>
     <div class="top-hr"></div>
     <div class="mid-bar"></div>
     <div class="color-bar"></div>
     <div class="bottom-bar"></div>
 </div>
-<div class="scene">
+<div class="scene" id="Scene">
     <div class="phone"><img src="img/phone.png"></div>
     <div class="info">
         <img src="img/logo.png" alt="logo" width="130" height="130" class="logo">

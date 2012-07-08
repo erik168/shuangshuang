@@ -2,28 +2,27 @@ ol, ul, li, dl, dt, dd { list-style:none; padding:0; margin:0; }
 p, h3, h4 { padding:0; margin:0; }
 img { border: 0; }
 
-a:link { color: #444; text-decoration:underline; }
-a:visited { color: #444; }
-a:hover { color:#86ade2; }
-a:active { color:#86ade2; }
+a:link { color: #ccc; text-decoration:none; }
+a:visited { color: #ccc; }
+a:hover { color:#ccc; }
+a:active { color:#ccc; }
 
+html { height:100%; }
 body {
     background:#f8f3eb;
     margin:0;
     font-size:14px;
     font-family: "Microsoft YaHei", STHei, SimHei;
     color:#999;
+    height:100%;
 }
 
-.bg {
-    width:4000px;
-}
 .nav {
     top:12px;
     left:198px;
     position:absolute;
     z-index:10;
-    width:260px;
+    width:216px;
     height:36px;
     padding:12px 0 12px 20px;
     background:#1b1b1b;
@@ -49,8 +48,9 @@ body {
     margin-right:20px;
     float:left;
     cursor:pointer;
-    background:url(img/sprite8.png) -80px -256px;
+    background:url(img/sprite8.png) -296px -148px;
 }
+
 
 .top-hr {
     background:#1b1b1b;
@@ -61,7 +61,7 @@ body {
 
 .mid-bar {
     background:#2a2a2a;
-    height:639px;
+    height:646px;
     background:url(img/bg.png);
 }
 
@@ -76,25 +76,33 @@ body {
     background:url(img/bg_bottom.png);
     height:244px;
 }
-
+.mainbody {
+    width:100%;
+    height:100%;
+    overflow: auto;
+}
 .scene {
+    width:3840px;
     position:absolute;
     top:0;
     left:0;
-    -webkit-transition:left 0.3s ease-out;
-    -moz-transition:left 0.3s ease-out;
 }
 
 .phone {
-    margin: 110px 0 0 120px;
-    float:left;
+    left:117px;
+    top:127px;
+    position:absolute;
 }
-
+.logo { 
+    top:138px;
+    left:806px;
+    position:absolute;
+}
 .info {
     position:absolute;
-    left:706px;
-    top:170px;
-    width:500px;
+    left:725px;
+    top:290px;
+    width:460px;
 }
 
 .info img {
@@ -102,60 +110,56 @@ body {
     margin:0 auto;
 }
 
-.subtitle {
-    width:310px;
-    height:40px;
-    background:url(img/word.png);
-    margin:22px auto 18px;
-}
-
 .description { 
-    font-size:20px; 
+    font-family: SimHei;
+    font-size:18px; 
     line-height:30px;
     color:#ccc;
     margin-bottom:12px;
+    text-align:center;
 }
 
 .download-notice {
     font-size:12px;
-    color:#6f6f6f;
-    text-align:center;
+    color:#ccc;
     position:absolute;
-    top:670px;
-    left:770px;
+    top:574px;
+    left:810px;
     width:368px;
 }
 
-.get-free {
+.download-notice b {
     font-size:18px;
+    padding-right:6px;
 }
 
 .download {
     position:absolute;
-    top:720px;
-    left:770px;
-    width:373px;
+    top:605px;
+    left:772px;
+    width:400px;
 }
 
 .download a {
     float:left;
-    width:185px;
-    height:78px;
+    width:179px;
+    height:125px;
 }
 
 .download .ios {
-    margin-right:3px;
-    background:url(img/sprite24.png);
+    margin-right:9px;
+    background:url(img/sprite8.png);
 }
 
 .download .android {
-    background:url(img/sprite24.png) 0 -80px;
+    width:178px;
+    background:url(img/sprite8.png) -180px 0;
 }
 
 .weibo {
     color:#6f6f6f;
-    top:742px;
-    left:128px;
+    left:3122px;
+    top:540px;
     position:absolute;
 }
 
@@ -164,24 +168,20 @@ body {
     *display:inline;
     *zoom:1;
     margin-right:11px;
-    position:relative;
-    top:7px;
+    width:47px;
+    height:37px;
 }
 .weibo .sina {
-    background: url(img/sprite24.png) -185px 0;
-    width:38px;
-    height:32px;
+    background: url(img/sprite8.png) -297px -220px;
 }
 
 .weibo .tencent {
-    background: url(img/sprite24.png) -185px -32px;
-    width:29px;
-    height:36px;
+    background: url(img/sprite8.png) -297px -181px;
 }
 
 .copy {
-    top:842px;
-    left:128px;
+    top:850px;
+    left:850px;
     position:absolute;
     font-size:12px;
 }
@@ -206,16 +206,32 @@ body {
 .join-moreinfo {
     position: absolute;
     top:490px;
-    left:1490px;
-    width:866px;
+    left:1483px;
+    width:880px;
     text-align:center;
     line-height:26px;
 }
 
-.mailus {
+.send-resume {
     position:absolute;
     top:560px;
     left:1816px;
+    width:210px;
+    height:49px;
+}
+
+.send-resume u {
+    float:left;
+    margin-top:6px;
+    width:29px;
+    height:21px;
+    background:url(img/sprite8.png) -256px -227px;
+}
+
+.send-resume span {
+    width:160px;
+    padding-left:6px;
+    float:left;
 }
 .env {
     position:absolute;
@@ -233,15 +249,15 @@ body {
 }
 
 .env1 { background:url(img/photo.jpg);}
-.env2 { background:url(img/photo.jpg) -253px 0;}
-.env3 { background:url(img/photo.jpg) -506px 0;}
+.env2 { background:url(img/photo.jpg) -254px 0;}
+.env3 { background:url(img/photo.jpg) -507px 0;width:251px;}
 .env4 { background:url(img/photo.jpg) -759px 0;}
 
 .belief {
     position:absolute;
-    top:435px;
-    left:2735px;
-    width:820px;
+    top:406px;
+    left:2705px;
+    width:880px;
     text-align:center;
     line-height:28px;
     font-size:16px;
@@ -259,10 +275,7 @@ body {
 .dream {
     position:absolute;
     left:2804px;
-    top:350px;
-    width:638px;
-    height:66px;
-    background:url(img/word.png) 0 -42px no-repeat;
+    top:334px;
 }
 .welike {
     position:absolute;
@@ -270,7 +283,7 @@ body {
     left:2660px;
     width:1022px;
     height:190px;
-    background:url(img/photo.jpg) 0 -155px;
+    background:url(img/photo.jpg) 0 -156px;
     border-radius:7px;
 }
 
@@ -329,60 +342,60 @@ body {
 }
 
 .rd {
-    background:url(img/sprite8.png);
+    background:url(img/sprite8.png) 0 -148px;
     margin-left:51px;
     float:left;
 }
 
 .rd-unfold {
-    background:url(img/sprite8.png) -64px 0;
+    background:url(img/sprite8.png) 0 -212px;
     margin-left:37px;
     float:left;
 }
 
 .pm {
-    background:url(img/sprite8.png) 0 -64px;
+    background:url(img/sprite8.png) -64px -148px;
     margin-left:59px;
     float:left;
 }
 
 .pm-unfold {
-    background:url(img/sprite8.png) -64px -64px;
+    background:url(img/sprite8.png) -64px -212px;
     margin-left:45px;
     float:left;
 }
 
 .ps {
-    background:url(img/sprite8.png) 0 -128px;
+    background:url(img/sprite8.png) -128px -148px;
     margin-left:59px;
     float:left;
 }
 
 .ps-unfold {
-    background:url(img/sprite8.png) -64px -128px;
+    background:url(img/sprite8.png) -128px -212px;
     margin-left:45px;
     float:left;
 }
 
 .ax {
-    background:url(img/sprite8.png) 0 -192px;
+    background:url(img/sprite8.png) -192px -148px;
     margin-left:64px;
     float:left;
 }
 
 .ax-unfold {
-    background:url(img/sprite8.png) -64px -192px;
+    background:url(img/sprite8.png) -192px -212px;
     margin-left:50px;
     float:left;
 }
 
 .plus {
-    background:url(img/sprite8.png) -40px -256px;
+    background:url(img/sprite8.png) -257px -187px;
     margin-left:124px;
 }
 
 .minus {
-    background:url(img/sprite8.png) 0 -256px;
+    background:url(img/sprite8.png) -257px -148px;
     margin:20px 0 0 110px;
     cursor:pointer;
 }
@@ -414,6 +427,11 @@ body {
     color:#999;
 }
 
+.position-detail h4 {
+    font-size:12px;
+    font-weight:bold;
+    color:#ccc;
+}
 .position-detail ol {
     margin-bottom: 18px;
 }
@@ -422,3 +440,31 @@ body {
 .pm-position {left:1629px;}
 .ps-position {left:1919px;}
 .ax-position {left:2209px;}
+
+.mailus {
+    position:absolute;
+    top:608px;
+    left:2935px;
+}
+.mailus u {
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    position:relative;
+
+}
+.logo-s {
+    background:url(img/sprite8.png) -257px -248px;
+    width:26px;
+    height:23px;
+    top:5px;
+    margin:0 2px 0 6px;
+}
+
+.envelope {
+    background:url(img/sprite8.png) -296px -258px;
+    width:23px;
+    height:17px;
+    margin-right:5px;
+    top:4px;
+}

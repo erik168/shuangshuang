@@ -9,18 +9,44 @@
 <body>
 <script>
 function gotoScene( index ) {
-    document.getElementById( 'Scene' ).style.left = - ( 1280 * index )+ 'px';
+    moveSceneTo( 1280 * index );
+}
+
+function getMain() {
+    return document.getElementById( 'Main' );
+}
+
+function moveSceneTo( end ) {
+    var main = getMain();
+    var start = main.scrollLeft;
+    var duration = 300;
+    var step = 20;
+
+    var currentStep = 1;
+
+    function doMove() {
+        if ( currentStep == step ) {
+            main.scrollLeft = end;
+            return;
+        }
+
+        main.scrollLeft = Math.floor( start + ( end - start ) * Math.pow( currentStep / step, 2 ) );
+        currentStep++;
+        setTimeout( doMove, duration / step );
+    }
+
+    setTimeout( doMove, duration / step );
 }
 </script>
+<div class="top-hr"></div>
 <div class="nav">
     <img src="img/space.gif" width="41" height="32" alt="双双" class="nav-logo" onclick="gotoScene( 0 )">
     <div><u onclick="gotoScene( 1 )">加入</u></div>
     <div><u onclick="gotoScene( 2 )">关于</u></div>
 </div>
 
-<div class="mainbody">
+<div class="mainbody" id="Main">
 <div class="scene" id="Scene">
-    <div class="top-hr"></div>
     <div class="mid-bar"></div>
     <div class="color-bar"></div>
     <div class="bottom-bar"></div>

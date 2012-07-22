@@ -27,8 +27,8 @@ function hide( elem ) {
 
 function Tween( option ) {
     option = option || {};
-    var duration  = option.duration || 500;
-    var step      = option.step || 20;
+    var duration  = option.duration || 400;
+    var step      = option.step || 25;
     var inProcess = 0;
     var fn = option.fn || Tween.easeIn;
 

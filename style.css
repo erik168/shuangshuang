@@ -482,6 +482,8 @@ body {
     position:relative;
 
 }
+
+.mailus a{ color:#999;}
 .logo-s {
     background:url(img/sprite8.png) -257px -248px;
     width:26px;

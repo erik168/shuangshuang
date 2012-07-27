@@ -4,47 +4,163 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>双双 - 和你亲密的人在一起</title>
 <style>
-body{ background: #efe3d1; margin:0; font-family: SimHei;color:#999;}
-.header{ background:#333; padding-top:27px;}
+body{ 
+    background: #f4ebde; 
+    margin:0; 
+    font-family: STHei, SimHei;
+    color:#999;
+}
+.header{ 
+    background:#333; 
+    padding:27px 0 35px;
+    box-shadow:inset 0 -1px 6px rgba(0,0,0,.28);
+}
 .logo{margin:0 auto;display:block;}
 .description { 
-    font-size:18px; 
+    font-size:22px; 
     line-height:30px;
     color:#ccc;
     padding:0 50px;
     text-align:center;
 }
 .download-notice {
-    font-size:12px;
+    font-size:18px;
     color:#ccc;
     text-align:center;
 }
 
 .download-notice b {
     padding-right:6px;
+    font-size:20px;
 }
 
-dl, dt, dd{padding:0;margin:0;}
-dt, dd{ text-align:center;}
+dl, dt, dd{padding:0;margin:0; color:#333;}
+dt{ margin-top:20px;line-height:48px;text-align:center;font-size:30px;}
+dd{color:#666;text-align:center;line-height:32px;font-size:24px;}
 
 .mailus-header {
     background:#e3ddd5;
-    width:200px;
+    padding:0 16px;
+    width:168px;
     height:36px;
     line-height:36px;
     border-radius:18px;
-    margin: auto;
+    margin: 40px auto 0;
     text-align:center;
     box-shadow:inset 0 2px #d8d3cb, 0 1px #fff;
+    font-size:22px;
+    color:#666;
+}
+
+.mailus-header b {
+    padding-left:10px;
+    color:#333;
+    font-weight:normal;
 }
 
 .mailus {
-    margin:0 45px;
+    padding:0 18px;
+    margin:0 auto;
+    width:514px;
     height:48px;
     line-height:48px;
     border-radius:18px;
     background:#e3ddd5;
+    font-size:18px;
+    color:#666;
+    text-align:center;
     box-shadow:inset 0 2px #d8d3cb, 0 1px #fff;
+}
+.mailus u {
+    display:inline-block;
+    position:relative;
+}
+
+.mailus a:link,.mailus a:visited,.mailus a:hover,.mailus a:active {
+    color:#666;
+    text-decoration:none;
+}
+
+.download {
+    width:550px;
+    height:110px;
+    margin:12px auto 0;
+}
+.download a {
+    float:left;
+    width:256px;
+    height:110px;
+}
+
+.download .ios {
+    background:url(img/sprite.png);
+}
+
+.download .android {
+    background:url(img/sprite.png) -258px 0;
+    float:right;
+}
+
+.header-hr {
+    width:480px;
+    height:3px;
+    font-size:1px;
+    margin:50px auto;
+    background-image:-webkit-gradient(linear,0% 0%,100% 0%,from(rgba(101,101,101,0)),color-stop(0.5,rgba(101,101,101,1)),to(rgba(101,101,101,0)));
+    background-image:-moz-linear-gradient(0deg,rgba(101,101,101,0), rgba(101,101,101,1) 50%, rgba(101,101,101,0));
+}
+
+.color-hr {
+    height:5px;
+    font-size:1px;
+    background-image:-webkit-gradient(linear,0% 0%,100% 0%,from(#6bd63b),color-stop(0.25,#e0f124),color-stop(0.5,#ffc021),color-stop(0.75,#f43031),to(#bb0d4a));
+    background-image:-moz-linear-gradient(0deg,#6bd63b, #e0f124 25%,#ffc021 50%, #f43031 75%, #bb0d4a);
+}
+
+
+.logo-s {
+    background:url(img/sprite.png) -557px -38px;
+    width:33px;
+    height:27px;
+    top:8px;
+    margin-right:5px;
+}
+
+.envelope {
+    background:url(img/sprite.png) -559px -65px;
+    width:31px;
+    height:22px;
+    margin:0 5px 0 48px;
+    top:6px;
+}
+.copy{
+    text-align:center;
+    color:#999;
+    font-size:18px;
+    padding:90px 0 30px;
+}
+
+.weibo {
+    width:116px;
+    height:38px;
+    margin:20px auto;
+}
+
+.weibo a {
+    display:inline-block;
+}
+.weibo .sina {
+    float:left;
+    width:43px;
+    height:35px;
+    background: url(img/sprite.png) -515px 0;
+}
+
+.weibo .tencent {
+    float:right;
+    width:32px;
+    height:38px;
+    background: url(img/sprite.png) -558px 0;
 }
 </style>
 </head>
@@ -53,14 +169,16 @@ dt, dd{ text-align:center;}
 <div class="header">
     <img src="img/logo.png" alt="logo" width="332" height="186" class="logo">
     <div class="description">一款为情侣、夫妻、蜜友量身打造的亲密社交应用<br>和你最亲密的人在这里，细腻沟通、深刻了解、美妙记忆</div>
+    <div class="header-hr"></div>
     <div class="download-notice">
-        <b>立即免费获取</b>在手机上的应用市场搜索“双双”
+        <b>立即免费获取</b><br>在手机上的应用市场搜索“双双”
     </div>
     <div class="download">
-        <a href="apple" class="ios"></a>
+        <a href="#" class="ios"></a>
         <a href="android" class="android"></a>
     </div>
 </div>
+<div class="color-hr"></div>
 <div class="main">
     <dl>
         <dt>秘密花园</dt>
@@ -76,7 +194,7 @@ dt, dd{ text-align:center;}
     <a href="http://weibo.com/u/2596921271?topnav=1" alt="新浪微博" class="sina" target="_blank"></a>
     <a href="http://t.qq.com/couplecouple" alt="腾讯微博" class="tencent" target="_blank"></a>
 </div>
-<div class="mailus">联系我们：<u class="logo-s"></u>在双双里找“双双团队”<u class="envelope"></u><a href="mailto:shuangteam@fanxer.com">shuangteam@fanxer.com</a></div>
-<div class="copy">2012 北京凡想科技有限公司 版权所有</div>
+<div class="mailus"><u class="logo-s"></u>在双双里找“双双团队”<u class="envelope"></u><a href="mailto:shuangteam@fanxer.com">shuangteam@fanxer.com</a></div>
+<div class="copy">2012&nbsp;北京凡想时光科技有限公司&nbsp;版权所有</div>
 </body>
 </html>

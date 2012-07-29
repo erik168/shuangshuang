@@ -10,7 +10,7 @@
 <script src="index.js"></script>
 
 
-
+<div class="mask" id="Mask"></div>
 <div class="mainbody" id="Main">
 <div class="scene" id="Scene">
     <div class="nav" id="Nav">
@@ -38,7 +38,7 @@
     <img src="img/logo.jpg" alt="logo" width="295" height="146" class="logo">
     <div class="info">
         <div class="description">一款为情侣、夫妻、蜜友量身打造的亲密社交应用<br>和你最亲密的人在这里，细腻沟通、深刻了解、美妙记忆</div>
-        <img src="img/movie.png" alt="movie start" width="250" height="170">
+        <img src="img/movie.png" alt="movie start" width="250" height="170" class="movie-start" id="MovieStart" onclick="Movie.start();">
     </div>
     <div class="download-notice">
         <b>立即免费获取</b>在手机上的应用市场搜索“双双”
@@ -47,10 +47,7 @@
         <a href="apple" class="ios"></a>
         <a href="android" class="android"></a>
     </div>
-    <div class="weibo">
-        <a href="http://weibo.com/u/2596921271?topnav=1" alt="新浪微博" class="sina" target="_blank"></a>
-        <a href="http://t.qq.com/couplecouple" alt="腾讯微博" class="tencent" target="_blank"></a>
-    </div>
+    
     <div class="copy">2012 北京凡想科技有限公司 版权所有</div>
 
     <div class="joinus">
@@ -206,11 +203,17 @@
     <img class="team" src="img/space.gif" alt="team">
     <img class="dream" src="img/dream.jpg" width="633" height="59" alt="很多的梦，趁黄昏起哄，当我们入睡时，一只手枕在头下，另一只手伸到星空">
     <div class="group-pic2"></div><div class="group-pic1"></div>
+    <div class="weibo">
+        <a href="http://weibo.com/u/2596921271?topnav=1" alt="新浪微博" class="sina" target="_blank"></a>
+        <a href="http://t.qq.com/couplecouple" alt="腾讯微博" class="tencent" target="_blank"></a>
+    </div>
     <div class="mailus">联系我们：<u class="logo-s"></u>在双双里找“双双团队”<u class="envelope"></u><a href="mailto:shuangteam@fanxer.com">shuangteam@fanxer.com</a></div>
     <div class="balloon1"></div>
     <div class="balloon2"></div>
 </div>
 </div>
+<div id="MovieLayer" class="movie-layer"></div>
+<div id="MovieClose" class="movie-close" onclick="Movie.stop();">关闭</div>
 <script>init();</script>
 </body>
 </html>

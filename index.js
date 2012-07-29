@@ -17,8 +17,8 @@ function setOpacity( elem, opacity ) {
     }
 }
 
-function show( elem ) {
-    elem.style.display = '';
+function show( elem, display ) {
+    elem.style.display = display || '';
 }
 
 function hide( elem ) {
@@ -143,11 +143,11 @@ var Nav = function () {
 
 var Position = {
     show: function ( pos ) {
-        g( pos.toUpperCase() ).style.display = 'block';
+        show( g( pos.toUpperCase() ), 'block' );
     },
 
     hide: function ( pos ) {
-        g( pos.toUpperCase() ).style.display = 'none';
+        hide( g( pos.toUpperCase() ) );
     }
 };
 
@@ -202,6 +202,69 @@ var Exhibit = function () {
             show( g( ANDROID_PREFIX + before ) );
 
             startNext();
+        }
+    };
+}();
+
+var Mask = {
+    show: function () {
+        show( g( 'Mask' ), 'block' );
+    },
+
+    hide: function () {
+        hide( g( 'Mask' ) );
+    }
+};
+
+var Movie = function() {
+    var conf = {
+        src     : 'http://player.youku.com/player.php/sid/XMzExMjIxMDgw/v.swf',
+        width   : 480,
+        height  : 400,
+        quality : 'high',
+        type    : 'application/x-shockwave-flash',
+        align   : 'middle',
+        flashvars: 'isAutoPlay=true',
+        allowFullScreen: 'true',
+        allowScriptAccess: 'sameDomain'
+    };
+
+    var attrs = [];
+    for ( var k in conf ) {
+        attrs.push( k + '="' + conf[ k ] + '"' );
+    }
+    var html = '<embed ' + attrs.join( ' ' ) + '></embed>';
+    
+    function getViewWidth() {
+        var doc = document,
+            client = doc.compatMode == 'BackCompat' ? doc.body : doc.documentElement;
+
+        return client.clientWidth;
+    }
+
+    return {
+        start: function () {
+            Mask.show();
+            var layer = g( 'MovieLayer' );
+            var close = g( 'MovieClose' );
+            var width = conf.width;
+            var layerLeft = (getViewWidth() - width - 20 ) / 2;
+
+            show( layer, 'block' );
+            show( close, 'block' );
+            layer.style.left = layerLeft + 'px';
+            layer.style.width = width + 'px';
+            layer.style.height = conf.height + 'px';
+            close.style.left = layerLeft + width - 17 + 'px';
+            layer.innerHTML = html;
+        },
+
+        stop: function () {
+            var layer = g( 'MovieLayer' );
+            layer.innerHTML = '';
+            hide( layer );
+            hide( g( 'MovieClose' ) );
+            Mask.hide();
         }
     };
 }();

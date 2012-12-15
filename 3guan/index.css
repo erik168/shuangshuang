@@ -6,3 +6,4 @@ body { background: url(img/bg.png); margin:0; }
 .question h4 { font-size: 16px; margin: 30px 0 6px;}
 .question { font-size:14px; }
 .question td { line-height: 20px;vertical-align: middle;}
+.finish { margin: 20px auto; display: block; cursor: pointer;}

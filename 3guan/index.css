@@ -1,9 +1,31 @@
-body { background: url(img/bg.png); margin:0; }
+body { background: url(img/bg.png); margin:0; font-family: "Microsoft YaHei", STHei, SimHei; }
+form { padding:0; margin:0; }
 .main { margin:0 auto; width: 958px;}
-.head { background: url(img/head.jpg); width: 958px; height: 717px;}
-.question { background: #fff; padding: 20px 40px; margin-top: -30px;
-	font-family: "Microsoft YaHei", STHei, SimHei;}
+.head { background: url(img/head.jpg); width: 958px; height: 667px;}
+#start { margin: 546px 0 0 25px; cursor: pointer;}
+#start-title, #finish-title { margin: 546px 0 0 25px;}
+.foot { background: url(img/foot.jpg); width: 958px; height: 42px; margin-bottom: 42px;}
+.question { background: #fff; padding: 20px 40px; margin-top: -30px;}
 .question h4 { font-size: 16px; margin: 30px 0 6px;}
 .question { font-size:14px; }
 .question td { line-height: 20px;vertical-align: middle;}
-.finish { margin: 20px auto; display: block; cursor: pointer;}
+#finish { margin: 20px auto; display: block; cursor: pointer;}
+#result { color: #505050; font-size:16px;}
+.test-result { background: #fff; border: 1px solid #e2e2e2; border-radius: 10px;
+	float:left; width:514px; padding: 8px; box-shadow: 0 0 6px #666; margin-bottom:30px;}
+.test-result img { display: block; }
+.test-result h3 { font-size: 18px; margin: 0 0 10px;}
+.share-result { float: left; margin-left: 16px; width: 410px;}
+.text-wrap { background: #ececec; border: 1px solid #cdcdcd; border-radius: 6px; padding:2px;}
+#share-text { width: 406px; outline: 0; border: 0; resize: none; background: transparent;}
+.send { display: block; margin: 20px auto 25px; border-radius: 5px; box-shadow: 1px 1px 4px #666; 
+	cursor: pointer;}
+.logo { display: block; margin: 0 auto 5px; }
+.description { color: #7b7b7b; text-align: center; font-size: 12px;}
+.download-notice { margin-top: 15px; color: #7b7b7b; font-size: 10px; text-align: center;}
+.download-notice b { font-size: 14px;}
+.download { margin: 5px auto 0; width: 210px; }
+.download a { display: block; width: 102px; height: 38px; float:left;
+	border-radius: 3px; box-shadow: 1px 1px 2px #999;}
+.download .ios { background: url(img/down.jpg);}
+.download .android { background: url(img/down.jpg) right top; margin-left: 5px; }

@@ -66,6 +66,12 @@ function sendWeibo() {
     };
 
     g( 'send' ).onclick = sendWeibo;
+
+    var accessToken = '';
+    if ( /(^|&|\?)access_token=([^&]+)(&|$)/.test( location.search ) ) {
+        accessToken = RegExp.$2;
+    }
+    g( 'access-token' ).value = accessToken;
 })();
 
 var VALUE = {

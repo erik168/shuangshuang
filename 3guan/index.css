@@ -1,9 +1,9 @@
 body { background: url(img/bg.png); margin:0; font-family: "Microsoft YaHei", STHei, SimHei; }
 form { padding:0; margin:0; }
+img { border: 0; }
 .main { margin:0 auto; width: 958px;}
-.head { background: url(img/head.jpg); width: 958px; height: 667px;}
-#start { margin: 546px 0 0 25px; cursor: pointer;}
-#start-title, #finish-title { margin: 546px 0 0 25px;}
+.head { background: url(img/head.jpg); width: 958px; height: 121px; padding-top: 546px;}
+.head a, #start-title, #finish-title { margin-left: 25px;}
 .foot { background: url(img/foot.jpg); width: 958px; height: 42px; margin-bottom: 42px;}
 .question { background: #fff; padding: 20px 40px; margin-top: -30px;}
 .question h4 { font-size: 16px; margin: 30px 0 6px;}

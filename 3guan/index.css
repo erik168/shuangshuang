@@ -7,7 +7,7 @@ img { border: 0; }
 .foot { background: url(img/foot.jpg); width: 958px; height: 42px; margin-bottom: 42px;}
 .question { background: #fff; padding: 20px 40px; margin-top: -30px;}
 .question h4 { font-size: 16px; margin: 30px 0 6px;}
-.question { font-size:14px; }
+.question { font-size:15px; }
 .question td { line-height: 20px;vertical-align: middle;}
 #finish { margin: 20px auto; display: block; cursor: pointer;}
 #result { color: #505050; font-size:16px;}
@@ -24,8 +24,10 @@ img { border: 0; }
 .description { color: #7b7b7b; text-align: center; font-size: 12px;}
 .download-notice { margin-top: 15px; color: #7b7b7b; font-size: 10px; text-align: center;}
 .download-notice b { font-size: 14px;}
-.download { margin: 5px auto 0; width: 210px; }
-.download a { display: block; width: 102px; height: 38px; float:left;
+.download { margin: 5px auto 0; width: 290px; }
+.download a { display: block; width: 142px; height: 56px; float:left;
 	border-radius: 3px; box-shadow: 1px 1px 2px #999;}
 .download .ios { background: url(img/down.jpg);}
 .download .android { background: url(img/down.jpg) right top; margin-left: 5px; }
+.split {line-height:1px;font-size:1px;background:#d2d2d2;height:1px;width:348px;
+	margin:20px auto;border-bottom:1px solid #fff;}
